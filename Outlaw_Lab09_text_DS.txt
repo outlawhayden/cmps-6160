@@ -1,0 +1,110 @@
+Outlaw_DS_Lab9
+
+MURDER::Jan 15, 2018:: SQL City
+
+SELECT * FROM crime_scene_report 
+WHERE type = 'murder' 
+AND city = 'SQL City'
+AND date = 20180115;
+
+Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".
+
+First witness - Morth Schapiro
+Second Witness - Annabel Miller
+
+SELECT person.name, interview.transcript
+FROM person JOIN interview
+ON person.id = interview.person_id
+WHERE person.id = 14887 OR person.id = 16371
+
+I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
+
+I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
+
+Membership number started with 48Z
+Membership status was gold
+Joe Germuska - ID 28819
+Jeremy Bowers - ID 67318
+
+Plate included H42W
+License ID NAME            Person ID
+183779     Maxine Whitely  78193
+423327     Jeremy Bowers   67318
+664760     Tushar Chandra  664760
+
+Was there on Jan 9
+
+JEREMY BOWERS is MURDERER
+
+Hired by rich woman
+	- Around 5'5" or 5'7", red hair, tesla model S, attended SQL Symphony concert 3 times in December 2017
+
+License ID 202298            291182         918773
+Name       Miranda Priestly  Regina George  Red Korb
+Person ID  99716             90700          78881
+
+Real murder is Miranda Priestly
+
+
+
+
+SQL - Structured Query Language
+
+ERD - Entity Relationship Diagram
+	- Visual representation of all relavant tables with a database
+	- Name, list of column names(left), list of data types(red)
+	- Gold key indicates that it is primary key of table
+	- Blue arrow indecates that it is the foreign key of the corresponding table
+
+Queries -	
+	- Statements we construct to get data from the database
+	- If you want all data for each row in table, use '*' after SELECT
+	- DISTINCT returns distinct possibilities in table
+	- Can contain keywords, column names, table names, wildcard characters (*, %, etc.,), functions, filter criteria, etc.,
+
+Keywords
+	- Used to specify actions in queries
+	- Not technically case sensitive, but capitalize them anyways
+	- SELECT
+		- Grab data for specific columns in database
+		- SELECT * is select all columns
+		- use column names after SELECT and use commas to separate
+	- FROM
+		- Allows us to specify which tables we care about
+		- Select multiple tables as a list afterwards, separate with commas
+	- WHERE
+		- Filter results by specific criteria
+	- AND
+		- Strings together multiple filtering criteria all at same time
+	- OR
+		- Strings together multiple criteria where at least one must be true
+	- LIKE
+		- Used with wildcards (%, _)
+	- BETWEEN/AND
+		- Used to specify ranges
+	- UPPER()/LOWER()
+		- Case sensitive
+		- Smooths text into upper or lower case
+
+Aggregate Functions
+	- COUNT
+		- Number of column values
+	- AVG
+		- Average of specified column values
+	- SUM
+		- Sum of specified column values
+	- MIN
+		- Min of specified column values
+	- MAX
+		- Max of specified column values
+	- ORDER BY
+		- Orders data by column value
+		- Takes in ASC, DESC
+Joins
+	- INNNER, OUTER, LEFT, and RIGHT
+	- This program only uses INNER
+	JOIN table1 
+	ON table1.id = table2.id
+
+
+
